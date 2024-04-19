@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import BookTable from './BookTable';
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -25,22 +26,7 @@ function App() {
       <div className='container py-5'>
         <h1 className='mb-5 text-center'>Könyvtár könyvei</h1>
         <div className='row justify-content-center'>
-          <table className='table table-striped table-hover w-50'>
-            <thead>
-              <tr>
-                <th>Író</th>
-                <th>Cím</th>
-              </tr>
-            </thead>
-            <tbody>
-              {books.sort().map(book => (
-                <tr>
-                  <td> {book.name} </td>
-                  <td> {book.title} </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <BookTable books={books} />
         </div>
       </div>
   );
