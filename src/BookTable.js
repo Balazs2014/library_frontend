@@ -5,8 +5,8 @@ function BookTable({ books }) {
     <table className='table table-striped table-hover w-50'>
       <thead>
         <tr>
-          <th class="col-md-6">Író</th>
-          <th class="col-md-6">Cím</th>
+          <th className="col-md-6">Író</th>
+          <th className="col-md-6">Cím</th>
         </tr>
       </thead>
       <tbody>
